@@ -18,15 +18,14 @@
         <input id="password" name="password" type="password">
         <br>
 
-        <input type="submit" value="calculate">
+        <input type="submit">
     </form>
 
-    <%= request.getParameter("username")%>
-    <%= request.getParameter("password")%>
 
     <c:if test="${param.username == 'admin' && param.password == 'password'}">
     <% response.sendRedirect("/profile.jsp");%>
     </c:if>
 
+    <%@ include file="partials/scripts.jsp"%>
 </body>
 </html>
