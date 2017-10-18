@@ -7,12 +7,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Deprecated
+@WebServlet (name="LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<Ad> ads = DaoFactory.getAdsDao().all();
-        request.setAttribute("ads", ads);
-        request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
+       request.getRequestDispatcher("login.jsp").forward(request, response);
+
+
 
 
     }
