@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "LogoutServlet", urlPatterns = "/login")
+@WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
 public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
